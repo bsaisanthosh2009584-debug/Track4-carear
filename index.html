@@ -204,6 +204,101 @@
     }
 
 }
+        /* AI Skill Scanner */
+
+#skill-scanner {
+    background: #f5f7fb;
+}
+
+.scanner {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.scanner-header {
+    padding: 18px 25px;
+    background: #172033;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.status {
+    color: #4caf50;
+    font-size: 14px;
+}
+
+.scanner-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 35px;
+}
+
+.profile,
+.analysis {
+    padding: 25px;
+    border-radius: 14px;
+    background: #f8f9fd;
+}
+
+.profile h3,
+.analysis h3 {
+    margin-bottom: 25px;
+}
+
+.profile label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8dce6;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.profile button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #315efb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile button:hover {
+    transform: translateY(-2px);
+}
+
+.placeholder {
+    color: #687386;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+    .scanner-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+}
     </style>
 </head>
 
