@@ -709,6 +709,103 @@ skill-scanner {
   .twin-container {
     grid-template-columns: 1fr;
   }
+}/* Personalized Learning Roadmap */
+
+#roadmap {
+  background: #ffffff;
+}
+
+.roadmap-container {
+  max-width: 800px;
+  margin: 45px auto 0;
+  position: relative;
+}
+
+.roadmap-container::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 25px;
+  bottom: 25px;
+  width: 2px;
+  background: #dce2f2;
+}
+
+.roadmap-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 22px;
+  padding: 20px;
+  background: #f8f9fd;
+  border-radius: 15px;
+  border: 1px solid #edf0f6;
+  transition: .3s;
+}
+
+.roadmap-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+.roadmap-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #eef3ff;
+  color: #315efb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  z-index: 1;
+  border: 4px solid white;
+}
+
+.roadmap-item.completed .roadmap-icon {
+  background: #315efb;
+  color: white;
+}
+
+.roadmap-item.current {
+  border: 1px solid #315efb;
+  background: #ffffff;
+}
+
+.roadmap-item span {
+  font-size: 11px;
+  font-weight: bold;
+  color: #315efb;
+  letter-spacing: .5px;
+}
+
+.roadmap-item h3 {
+  margin: 6px 0;
+  font-size: 17px;
+}
+
+.roadmap-item p {
+  color: #687386;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media(max-width:600px) {
+  .roadmap-item {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .roadmap-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .roadmap-container::before {
+    left: 23px;
+  }
 }
     </style>
 </head>
