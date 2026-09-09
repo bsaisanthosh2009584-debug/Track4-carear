@@ -157,6 +157,53 @@
                 display: none;
             }
         }
+        /* Hero Upgrade */
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 25px;
+    border: 1px solid #315efb;
+    border-radius: 30px;
+    color: #315efb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-stats {
+    max-width: 750px;
+    margin: 55px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.hero-stats div {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 18px 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.hero-stats strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.hero-stats span {
+    font-size: 13px;
+    color: #687386;
+}
+
+@media (max-width: 600px) {
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
     </style>
 </head>
 
