@@ -988,7 +988,47 @@ skill-scanner {
 .role-card a {
   display: block;
   color: #315
-    </style>
+/* Platform Features */
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10);
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 13px;
+  background: #eef3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  min-height: 78px;
+}
+
+.feature-card > span {
+  display: inline-block;
+  margin-top: 18px;
+  color: #315efb;
+  font-size: 13px;
+  font-weight: bold;
+}    </style>
 </head>
 
 <body>
