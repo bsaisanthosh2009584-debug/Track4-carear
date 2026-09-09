@@ -2079,14 +2079,24 @@ footer {
   };
 
   const selectedSkills = skills[career];
+    const totalScore = Math.round(
+  selectedSkills.reduce((sum, skill) => sum + skill[1], 0)
+  / selectedSkills.length
+);
 
-  let html = `
-    <h4>${career}</h4>
-    <p class="result-intro">
-      AI analysis of your current career readiness:
-    </p>
-  `;
+let html = `
+  <h4>${career}</h4>
 
+  <div class="readiness-score">
+    <strong>${totalScore}%</strong>
+    <span>Career Readiness Score</span>
+  </div>
+
+  <p class="result-intro">
+    AI analysis of your current career readiness:
+  </p>
+`;
+    
   selectedSkills.forEach(skill => {
     const name = skill[0];
     const score = skill[1];
