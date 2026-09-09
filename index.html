@@ -527,6 +527,70 @@ skill-scanner {
     flex-direction: column;
     text-align: center;
   }
+}/* Industry Skill Demand */
+
+#demand {
+  background: #ffffff;
+}
+
+.demand-container {
+  max-width: 950px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.demand-card {
+  background: #f8f9fd;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #edf0f6;
+  transition: .3s;
+}
+
+.demand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.demand-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.demand-top strong {
+  color: #315efb;
+  font-size: 18px;
+}
+
+.demand-bar {
+  width: 100%;
+  height: 9px;
+  background: #e4e8f1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.demand-bar div {
+  height: 100%;
+  background: #315efb;
+  border-radius: 20px;
+}
+
+.demand-card p {
+  margin-top: 13px;
+  color: #687386;
+  font-size: 13px;
+}
+
+@media(max-width:700px) {
+  .demand-container {
+    grid-template-columns: 1fr;
+  }
 }
     </style>
 </head>
