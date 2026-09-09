@@ -378,6 +378,155 @@ skill-scanner {
         width: 260px;
     }
 
+}/* Academia ↔ Industry Bridge */
+
+#bridge {
+  background: #f5f7fb;
+}
+
+.bridge-container {
+  max-width: 1000px;
+  margin: 50px auto 35px;
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.bridge-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.07);
+  border: 1px solid #edf0f6;
+  transition: .3s;
+}
+
+.bridge-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.10);
+}
+
+.bridge-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #eef3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.bridge-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.bridge-card p {
+  color: #687386;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.bridge-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bridge-points span {
+  background: #f7f8fc;
+  padding: 9px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4d5870;
+}
+
+.bridge-center {
+  text-align: center;
+}
+
+.ai-circle {
+  width: 78px;
+  height: 78px;
+  margin: auto;
+  border-radius: 50%;
+  background: #172033;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.bridge-center strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  color: #315efb;
+}
+
+.institution-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+.institution-card .bridge-icon {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.institution-card h3 {
+  margin-bottom: 8px;
+}
+
+.institution-card p {
+  color: #687386;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media(max-width:800px) {
+  .bridge-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bridge-center {
+    order: 2;
+  }
+
+  .industry {
+    order: 3;
+  }
+
+  .bridge-center {
+    margin: 10px 0;
+  }
+}
+
+@media(max-width:500px) {
+  .bridge-points {
+    grid-template-columns: 1fr;
+  }
+
+  .institution-card {
+    flex-direction: column;
+    text-align: center;
+  }
 }
     </style>
 </head>
