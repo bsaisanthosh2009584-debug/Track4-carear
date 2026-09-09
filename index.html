@@ -206,7 +206,7 @@
 }
         /* AI Skill Scanner */
 
-#skill-scanner {
+skill-scanner {
     background: #f5f7fb;
 }
 
@@ -611,6 +611,88 @@
     <p>© 2026 Track4Career</p>
 
 </footer>
+<script>
+function analyzeSkills() {
 
+    const career = document.getElementById("careerGoal").value;
+    const result = document.getElementById("analysisResult");
+
+    const skills = {
+        "Software Developer": [
+            ["Programming", 82],
+            ["Problem Solving", 68],
+            ["Data Structures", 55],
+            ["Git & GitHub", 45]
+        ],
+
+        "Data Analyst": [
+            ["Python", 72],
+            ["SQL", 58],
+            ["Data Visualization", 51],
+            ["Statistics", 46]
+        ],
+
+        "AI / ML Engineer": [
+            ["Python", 70],
+            ["Machine Learning", 48],
+            ["Mathematics", 42],
+            ["Deep Learning", 35]
+        ],
+
+        "Cybersecurity Analyst": [
+            ["Networking", 63],
+            ["Linux", 55],
+            ["Security Fundamentals", 47],
+            ["Threat Analysis", 38]
+        ],
+
+        "UI/UX Designer": [
+            ["UI Design", 76],
+            ["UX Research", 61],
+            ["Prototyping", 54],
+            ["Design Systems", 43]
+        ]
+    };
+
+    let selectedSkills = skills[career];
+
+    let html = `
+        <h4>${career}</h4>
+        <p class="result-intro">
+            AI analysis of your current career readiness:
+        </p>
+    `;
+
+    selectedSkills.forEach(skill => {
+
+        const name = skill[0];
+        const score = skill[1];
+
+        html += `
+            <div class="skill">
+                <div class="skill-info">
+                    <span>${name}</span>
+                    <span>${score}%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar"
+                         style="width:${score}%">
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    html += `
+        <div class="gap-message">
+            🎯 AI Insight:
+            Focus first on the skills below 60%.
+        </div>
+    `;
+
+    result.innerHTML = html;
+}
+</script>
 </body>
 </html>
